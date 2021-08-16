@@ -1,0 +1,31 @@
+version: '3'
+services:
+  database:
+    image: postgres:latest
+    hostname: database
+    expose:
+        - "5432"
+    ports:
+        - "5432:5432"
+    networks:
+        - default
+    environment:
+        POSTGRES_PASSWORD: password
+        POSTGRES_USER: postgres
+        POSTGRES_DB: postgres     
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+
+  app:
+    build: ./services/backend/
+    depends_on:
+        - database
+    environment:
+        POSTGRESQL_HOST: database
+        POSTGRESQL_USER: postgres
+        POSTGRESQL_PASSWORD: password
+        POSTGRESQL_PORT: 5432
+
+
+volumes:
+    database-data:

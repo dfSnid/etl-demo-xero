@@ -1,0 +1,27 @@
+{
+  "name": "datagen-local",
+  "version": "1.0.0",
+  "description": "Generates and insetrs data to postgres db",
+  "main": "src/run.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/run.js",
+    "dev": "dotenv npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfSnid/Mock-Datagen-Kafka-K8s.git"
+  },
+  "author": "Snid Chakravarty",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv-cli": "^4.0.0",
+    "eslint": "^7.26.0",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "mocker-data-generator": "^2.12.0",
+    "node-postgres": "^0.6.2",
+    "pg": "^8.7.1"
+  }
+}
