@@ -13,7 +13,7 @@ The thought process for this use case starts with a very simple requirement of b
 Clone this project and from the project root directory execute the following :
 
 ```
-docker-compose -up -d
+docker-compose up -d
 ```
 Once the images are up and running , exec into the PostgreSQL container and execute the following :
 
